@@ -8,17 +8,17 @@ function createSurvey(title, speaker, number) {
   form.setTitle(fullTitle);
   form.setDescription(DESCRIPTION);
 
-	var item = form.addMultipleChoiceItem();
+  var item = form.addMultipleChoiceItem();
     item.setRequired(true);
-	item.setTitle('Seleccione su país');
-	item.setChoices([
-      item.createChoice('Argentina'),
-      item.createChoice('Chile'),
-      item.createChoice('Colombia'),
-      item.createChoice('Paraguay'),
-      item.createChoice('Uruguay'),
-      item.createChoice('Webex'),
-      item.createChoice('Otro')
+    item.setTitle('Seleccione su país');
+    item.setChoices([
+    item.createChoice('Argentina'),
+    item.createChoice('Chile'),
+    item.createChoice('Colombia'),
+    item.createChoice('Paraguay'),
+    item.createChoice('Uruguay'),
+    item.createChoice('Webex'),
+    item.createChoice('Otro')
   ]);
 
   form.addMultipleChoiceItem()
