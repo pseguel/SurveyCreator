@@ -4,7 +4,6 @@ function createSurvey(title, speaker, number) {
   var DESCRIPTION = 'Ayúdenos a mejorar, esta encuesta busca encontrar las oportunidades de mejora que tenemos para las sesiones de enablement de Cisco';
   var fullURL = '';
   var shortURL = '';
-  var img = UrlFetchApp.fetch('https://www.cisco.com/c/en/us/index.html');
 
   form.setTitle(fullTitle);
   form.setDescription(DESCRIPTION);
@@ -64,7 +63,7 @@ function readSpeakers() {
     var urlRow = data[i][3];
     
     url = createSurvey(title, speaker, order);
-    Logger.log("Speaker: %s, Title: %s, URL: %s", speaker, title, url);
+    //Logger.log("Speaker: %s, Title: %s, URL: %s", speaker, title, url);
     sheet.getRange(i+1, 5).setValue(url);
     SpreadsheetApp.flush();
   }
